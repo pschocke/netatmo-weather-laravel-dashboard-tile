@@ -1,0 +1,59 @@
+{
+  "name": "pschocke/netatmo-weather-laravel-dashboard-tile",
+  "description": "A tile to show your Netatmo weather stations",
+  "keywords": [
+    "Netatmo Weather",
+    "laravel-dashboard",
+    "laravel-dashboard-tile",
+    "laravel-dashboard-netatmo-tile",
+    "Laravel Netatmo"
+  ],
+  "homepage": "https://github.com/pschocke/netatmo-weather-laravel-dashboard-tile",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Patrick Schocke",
+      "email": "patrick@ausbildung-ms.de",
+      "homepage": "https://github.com/pschocke",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "guzzlehttp/guzzle": "^7.0",
+    "illuminate/console": "^8.0",
+    "illuminate/http": "^8.0",
+    "illuminate/support": "^8.0",
+    "spatie/laravel-dashboard": "^2.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pschocke\\NetatmoWeatherTile\\NetatmoWeatherTileServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Pschocke\\NetatmoWeatherTile\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pschocke\\NetatmoWeatherTile\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  }
+}
